@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roman to Integer</title>
+  </head>
+  <body>
+    <script>
+      function roman(num) {
+        let roman = {
+          I: 1,
+          V: 5,
+          X: 10,
+          L: 50,
+          C: 100,
+          D: 500,
+          M: 1000,
+        };
+        let sum = 0;
+        let arr = num.split("");
+        console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+          let current = arr[i];
+          let next = arr[i + 1];
+          if (roman[current] < roman[next]) {
+            sum += roman[next] - roman[current];
+            i++;
+          } else {
+            sum += roman[current];
+          }
+        }
+        return sum;
+      }
+
+      console.log(roman("IXX"));
+    </script>
+  </body>
+</html>

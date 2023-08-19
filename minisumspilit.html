@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimum Sum Split</title>
+  </head>
+  <body>
+    <script>
+      function digit(num) {
+        let result = num.toString().split("").sort();
+        return Number(result[0] + result[3]) + Number(result[1] + result[2]);
+      }
+      console.log(digit(2932));
+    </script>
+  </body>
+</html>

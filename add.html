@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>concate, unshift, push</title>
+  </head>
+  <body>
+    <script>
+      /* function add(data) {
+        let star = "*".repeat(data[0].length + 2);
+        data.unshift(star);
+        data.push(star);
+        for (let i = 1; i < data.length - 1; i++) {
+          data[i] = "*".concat(data[i], "*");
+        }
+        return data;
+      }
+      console.log(add(["abd", "def"])); */
+
+      let data = ["abc", "def"];
+      let star = "*".repeat(data[0].length + 2);
+      data.unshift(star);
+      data.push(star);
+      for (let i = 1; i < data.length - 1; i++) {
+        data[i] = "*".concat(data[i], "*");
+      }
+      console.log(data);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome</title>
+  </head>
+  <body>
+    <script>
+      /* function palindrome(num) {
+        let result = num.toString().split("").reverse().join("");
+        if (Number(result) === num) {
+          return true;
+        } else {
+          return false;
+        }
+         if (result === num.toString()) {
+          return true;
+        } else {
+          return false;
+        }
+        if (result == num) {
+          return true;
+        } else {
+          return false;
+        } 
+      }
+      console.log(palindrome(121));
+      console.log(palindrome(-121));
+      console.log(palindrome(321)); */
+
+      function palindrome(num) {
+        if (num < 0 || (num % 10 == 0 && num != 0)) {
+          return false;
+        }
+        return true;
+      }
+      console.log(palindrome(121));
+      console.log(palindrome(-121));
+      console.log(palindrome(321));
+    </script>
+  </body>
+</html>
