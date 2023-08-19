@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wealth</title>
+  </head>
+  <body>
+    <script>
+      function wealth(arr) {
+        let sum = 0;
+        let rich = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr[i].length; j++) {
+            sum += arr[i][j];
+          }
+          rich[i] = sum;
+          sum = 0;
+        }
+
+        for (let k = 0; k < rich.length; k++) {
+          if (rich[0] < rich[k]) {
+            rich[0] = rich[k];
+          }
+        }
+
+        return rich[0];
+      }
+      console.log(
+        wealth([
+          [1, 2, 3],
+          [2, 2, 6],
+          [1, 1, 2],
+        ])
+      );
+    </script>
+  </body>
+</html>
