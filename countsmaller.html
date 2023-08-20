@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Smaller Number</title>
+  </head>
+  <body>
+    <script>
+      function countsmaller(arr) {
+        let result = [];
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length; j++) {
+            if (arr[j] < arr[i] && j != i) {
+              count += 1;
+            }
+          }
+          result[i] = count;
+          count = 0;
+        }
+        return result;
+      }
+      console.log(countsmaller([6, 5, 4, 8]));
+    </script>
+  </body>
+</html>
