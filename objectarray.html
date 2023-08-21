@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Array</title>
+  </head>
+  <body>
+    <script>
+      /* let obj = {
+        a: 1,
+        b: 2,
+      };
+      console.log(Object.entries(obj)); */
+      let objarr = (arr) => {
+        return Object.keys(arr).map((item) => [item, arr[item]]);
+      };
+
+      console.log(
+        objarr({
+          a: 1,
+          b: 2,
+        })
+      );
+    </script>
+  </body>
+</html>
