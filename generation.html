@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generation</title>
+  </head>
+  <body>
+    <script>
+      const generation = (x, y) => {
+        let genObj = {
+          "-3": { f: "great grandmother", m: "great grandfather" },
+          "-2": { f: "grandmother", m: "grandfather" },
+          "-1": { f: "mother", m: "father" },
+          0: { f: "me", m: "me" },
+          1: { f: "daughter", m: "son" },
+          2: { f: "granddaughter", m: "grandson" },
+          3: { f: "great granddaughter", m: "great grandson" },
+        };
+        return genObj[x][y];
+      };
+      console.log(generation(2, "m"));
+    </script>
+  </body>
+</html>

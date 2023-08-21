@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Defanging IP address</title>
+  </head>
+  <body>
+    <script>
+      function defangingip(ip) {
+        let arr = ip.split("");
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === ".") {
+            arr[i] = "[.]";
+          }
+        }
+        let result = arr.join("");
+        return result;
+      }
+      console.log(defangingip("1.1.1"));
+    </script>
+  </body>
+</html>
