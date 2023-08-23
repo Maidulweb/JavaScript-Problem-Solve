@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transpos Matrix</title>
+  </head>
+  <body>
+    <script>
+      let transpos = (arr) => {
+        let arr1 = Array.from({ length: arr[0].length }, () =>
+          new Array(arr.length).fill(0)
+        );
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr[0].length; j++) {
+            arr1[j][i] = arr[i][j];
+          }
+        }
+        return arr1;
+      };
+
+      console.log(
+        transpos([
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9],
+        ])
+      );
+    </script>
+  </body>
+</html>
