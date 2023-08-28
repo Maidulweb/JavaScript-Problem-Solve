@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valid Parantheses</title>
+  </head>
+  <body>
+    <script>
+      let valid = (parentheses) => {
+        let p = "(){}[]";
+        let arr = [];
+        let i = 0;
+        while (i < parentheses.length) {
+          arr.push(parentheses[i]);
+          i++;
+          let openP = arr[arr.length - 2];
+          let closeP = arr[arr.length - 1];
+          let total = openP + closeP;
+          if (p.includes(total)) {
+            arr.pop();
+            arr.pop();
+          }
+        }
+        return arr.length === 0;
+      };
+      console.log(valid("[]"));
+    </script>
+  </body>
+</html>
