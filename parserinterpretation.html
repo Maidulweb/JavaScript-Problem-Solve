@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parser Interpretation</title>
+  </head>
+  <body>
+    <script>
+      let parser = (interpretation) => {
+        let txt = interpretation.split("");
+        let arr = [];
+        for (let i = 0; i < txt.length; i++) {
+          if (txt[i] == "G") {
+            arr[i] = "G";
+          }
+          if (txt[i] == "(" && txt[i + 1] == ")") {
+            arr[i] = "o";
+          }
+          if (
+            txt[i] == "(" &&
+            txt[i + 1] == "a" &&
+            txt[i + 2] == "l" &&
+            txt[i + 3] == ")"
+          ) {
+            arr[i] = "al";
+          }
+        }
+        return arr.join("");
+      };
+      console.log(parser("G()(al)"));
+    </script>
+  </body>
+</html>
