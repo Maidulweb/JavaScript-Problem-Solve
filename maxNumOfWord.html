@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max Number of Word</title>
+  </head>
+  <body>
+    <script>
+      let max = (sentence) => {
+        let arr = [];
+        let wordMax = 0;
+        for (let i = 0; i < sentence.length; i++) {
+          arr[i] = sentence[i].split(" ");
+          if (arr[i].length > wordMax) {
+            wordMax = arr[i].length;
+          }
+        }
+        return wordMax;
+      };
+      console.log(max(["This is one", "this is two too row"]));
+    </script>
+  </body>
+</html>
