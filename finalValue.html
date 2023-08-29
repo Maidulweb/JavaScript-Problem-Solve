@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Value</title>
+  </head>
+  <body>
+    <script>
+      let finalValue = (num) => {
+        let final = 0;
+        for (let i = 0; i < num.length; i++) {
+          if (num[i] == "x++" || num[i] == "++x") {
+            final += 1;
+          } else if (num[i] == "x--" || num[i] == "--x") {
+            final -= 1;
+          }
+        }
+        return final;
+      };
+      console.log(finalValue("x++"));
+      console.log(finalValue("++x"));
+      console.log(finalValue("x--"));
+    </script>
+  </body>
+</html>
