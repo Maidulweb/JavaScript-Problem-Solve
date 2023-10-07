@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frq Value</title>
+  </head>
+  <body>
+    <script>
+      let freqValue = (nums) => {
+        let result = [];
+        for (let i = 0; i < nums.length; i = i + 2) {
+          let freq = nums[i];
+          let val = nums[i + 1];
+          for (let j = 0; j < freq; j++) {
+            result.push(val);
+          }
+        }
+        return result;
+      };
+
+      console.log(freqValue([1, 1, 2, 3]));
+    </script>
+  </body>
+</html>
