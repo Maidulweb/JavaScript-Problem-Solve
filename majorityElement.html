@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Majority Element</title>
+  </head>
+  <body>
+    <script>
+      const majorityElement = (nums) => {
+        nums.sort();
+        let indx = Math.floor(nums.length / 2);
+        return nums[indx];
+      };
+      console.log(majorityElement([3, 2, 3, 2, 2]));
+    </script>
+  </body>
+</html>
