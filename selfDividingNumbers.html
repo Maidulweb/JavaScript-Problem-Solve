@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Dividing Numbers</title>
+  </head>
+  <body>
+    <script>
+      const selfNum = (left, right) => {
+        let restArr = [];
+        for (let i = left; i <= right; i++) {
+          let self = true;
+          for (let n of i.toString().split("")) {
+            if (i % Number(n) !== 0) {
+              self = false;
+            }
+          }
+          if (self) {
+            restArr.push(i);
+          }
+        }
+        return restArr;
+      };
+      console.log(selfNum(1, 22));
+    </script>
+  </body>
+</html>
